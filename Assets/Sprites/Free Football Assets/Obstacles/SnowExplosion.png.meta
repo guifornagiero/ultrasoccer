@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SnowExplosion_0: -8755221040396045668
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Empanada_0: 3377851306596656404
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
