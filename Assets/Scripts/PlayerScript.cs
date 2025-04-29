@@ -2,26 +2,47 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    [Header("Horizontal Movement Settings: ")]
+    [SerializeField] private float walkSpeed = 1;
+    private float xAxis, yAxis;
     private Rigidbody2D rb;
-    private Vector2 movement;
+    private Animator anim;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
     {
-        // Captura entrada nos eixos X e Y
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-        movement = movement.normalized; // Normaliza pra não correr mais na diagonal
+        GetInputs();
+        Move();
+        Flip();
     }
 
-    void FixedUpdate()
+    void GetInputs()
     {
-        // Move o jogador com base na entrada
-        rb.velocity = movement * moveSpeed;
+        xAxis = Input.GetAxisRaw("Horizontal");
+        yAxis = Input.GetAxisRaw("Vertical");
+    }
+
+    void Move()
+    {
+        rb.velocity = new Vector2(walkSpeed * xAxis, walkSpeed * yAxis);
+        anim.SetBool("Walking", rb.velocity.x != 0 || rb.velocity.y != 0);
+    }
+
+
+    void Flip()
+    {
+        if (xAxis < 0)
+        {
+            transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
+        }
+        else if (xAxis > 0)
+        {
+            transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
+        }
     }
 }

@@ -154,7 +154,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BentoSpriteStatic_0: 6700008904913131168
+      BentoSpriteStatic_1: 4483466600170275948
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
