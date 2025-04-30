@@ -8,6 +8,11 @@ public class PlayerScript : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
 
+    [Header("Kick Settings: ")]
+    [SerializeField] private float forcaChute = 8f;
+    [SerializeField] private float alcanceChute = 3f;
+    [SerializeField] private LayerMask ballLayer;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -19,6 +24,7 @@ public class PlayerScript : MonoBehaviour
         GetInputs();
         Move();
         Flip();
+        Kick();
     }
 
     void GetInputs()
@@ -43,6 +49,24 @@ public class PlayerScript : MonoBehaviour
         else if (xAxis > 0)
         {
             transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
+        }
+    }
+
+    void Kick()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Collider2D bola = Physics2D.OverlapCircle(transform.position, alcanceChute, ballLayer);
+            if (bola != null && bola.CompareTag("Ball"))
+            {
+                Debug.Log("Bola detectada. Chutando!");
+                Vector2 direcao = (bola.transform.position - transform.position).normalized;
+                bola.GetComponent<Rigidbody2D>().AddForce(direcao * forcaChute, ForceMode2D.Impulse);
+            }
+            else
+            {
+                Debug.Log("Nenhuma bola próxima.");
+            }
         }
     }
 }
