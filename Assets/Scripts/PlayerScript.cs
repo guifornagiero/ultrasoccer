@@ -4,8 +4,8 @@ public class PlayerScript : MonoBehaviour
 {
     [Header("Horizontal Movement Settings: ")]
     [SerializeField] private float walkSpeed = 1;
-    private float xAxis, yAxis;
-    private Rigidbody2D rb;
+    protected float xAxis, yAxis;
+    protected Rigidbody2D rb;
     private Animator anim;
 
     [Header("Kick Settings: ")]
@@ -59,13 +59,8 @@ public class PlayerScript : MonoBehaviour
             Collider2D bola = Physics2D.OverlapCircle(transform.position, alcanceChute, ballLayer);
             if (bola != null && bola.CompareTag("Ball"))
             {
-                Debug.Log("Bola detectada. Chutando!");
                 Vector2 direcao = (bola.transform.position - transform.position).normalized;
                 bola.GetComponent<Rigidbody2D>().AddForce(direcao * forcaChute, ForceMode2D.Impulse);
-            }
-            else
-            {
-                Debug.Log("Nenhuma bola próxima.");
             }
         }
     }
