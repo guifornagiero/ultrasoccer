@@ -14,10 +14,10 @@ public class BentoScript : PlayerScript
     private float timeRemainingForUlt;
 
     private bool isDashing;
-    private Vector2 lastMoveDirection = Vector2.right; // Direção inicial (para a direita)
+    private Vector2 lastMoveDirection = Vector2.right; // Direï¿½ï¿½o inicial (para a direita)
 
     [Header("UI")]
-    [SerializeField] private TextMeshPro ultCooldownText; // Referência ao texto que vai mostrar o cooldown
+    [SerializeField] private TextMeshPro ultCooldownText; // Referï¿½ncia ao texto que vai mostrar o cooldown
 
     void Start()
     {
@@ -48,16 +48,16 @@ public class BentoScript : PlayerScript
             }
         }
 
-        // Atualiza a direção do movimento
+        // Atualiza a direï¿½ï¿½o do movimento
         if (xAxis != 0 || yAxis != 0)
         {
             lastMoveDirection = new Vector2(xAxis, yAxis).normalized;
         }
 
-        // Atualiza a posição do contador para ficar acima do personagem
+        // Atualiza a posiï¿½ï¿½o do contador para ficar acima do personagem
         if (ultCooldownText != null)
         {
-            ultCooldownText.transform.position = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z); // Ajuste o valor `+ 1f` para a altura desejada
+            ultCooldownText.transform.position = new Vector3(transform.position.x, transform.position.y + 1.3f, transform.position.z); // Ajuste o valor `+ 1f` para a altura desejada
         }
 
         // Ativar o dash e reiniciar o cooldown quando pressionar R
@@ -72,7 +72,7 @@ public class BentoScript : PlayerScript
         canDash = false;
         isDashing = true;
 
-        // Movimenta o jogador na direção do último movimento
+        // Movimenta o jogador na direï¿½ï¿½o do ï¿½ltimo movimento
         float dashTimer = 0f;
         while (dashTimer < dashTime)
         {
@@ -83,14 +83,14 @@ public class BentoScript : PlayerScript
 
         isDashing = false;
 
-        // Reinicia o cooldown da ult (2 minutos) após usar a habilidade
+        // Reinicia o cooldown da ult (2 minutos) apï¿½s usar a habilidade
         timeRemainingForUlt = ultCooldownTime;
 
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
 
-    // Função para formatar o tempo restante em minutos e segundos
+    // Funï¿½ï¿½o para formatar o tempo restante em minutos e segundos
     string FormatTime(float time)
     {
         int minutes = Mathf.FloorToInt(time / 60);

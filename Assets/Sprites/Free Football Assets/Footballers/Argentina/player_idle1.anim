@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_idle
+  m_Name: player_idle1
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -22,18 +22,18 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -2078564363, guid: 54d7084c20fe9e04ea1777c42c5d133f, type: 3}
-    - time: 0.25
+    - time: 0.1
       value: {fileID: -115294320, guid: 54d7084c20fe9e04ea1777c42c5d133f, type: 3}
-    - time: 0.5
+    - time: 0.2
       value: {fileID: 1899021693, guid: 54d7084c20fe9e04ea1777c42c5d133f, type: 3}
-    - time: 0.75
+    - time: 0.3
       value: {fileID: 572211936, guid: 54d7084c20fe9e04ea1777c42c5d133f, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 4
+  m_SampleRate: 10
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -59,7 +59,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1
+    m_StopTime: 0.4
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

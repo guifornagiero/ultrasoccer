@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c328e56637cbfac4db4efcf5833f6b4a
+guid: 54d7084c20fe9e04ea1777c42c5d133f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5876582003495451361
-    second: mapa-nuvem_0
+      213: 2155571024054431950
+    second: spritesheet_horizontal_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,22 +100,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mapa-nuvem_0
+      name: spritesheet_horizontal_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1536
-        height: 1008
-      alignment: 0
+        width: 13
+        height: 19
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1eabccb5230dd8150800000000000000
-      internalID: 5876582003495451361
+      spriteID: c1b5784fedc7bd843940ece20b4563bc
+      internalID: -2078564363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_horizontal_1
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 0
+        width: 13
+        height: 19
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56fa6517f7356664daceefedffbb384f
+      internalID: -115294320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_horizontal_2
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 0
+        width: 13
+        height: 19
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4aebefe04816f14895c382545c01cdb
+      internalID: 1899021693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_horizontal_3
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 0
+        width: 13
+        height: 19
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8542a775fba0114b80acf1cc1bc0fa7
+      internalID: 572211936
       vertices: []
       indices: 
       edges: []
@@ -123,7 +186,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4103cdac44abd23489c8e0f2335d684a
     internalID: 0
     vertices: []
     indices: 
@@ -131,7 +194,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      mapa-nuvem_0: 5876582003495451361
+      spritesheet_horizontal_0: -2078564363
+      spritesheet_horizontal_1: -115294320
+      spritesheet_horizontal_2: 1899021693
+      spritesheet_horizontal_3: 572211936
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

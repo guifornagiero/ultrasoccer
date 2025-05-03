@@ -36,7 +36,14 @@ public class PlayerScript : MonoBehaviour
     void Move()
     {
         rb.velocity = new Vector2(walkSpeed * xAxis, walkSpeed * yAxis);
-        anim.SetBool("Walking", rb.velocity.x != 0 || rb.velocity.y != 0);
+        //anim.SetBool("Walking", rb.velocity.x != 0 || rb.velocity.y != 0);
+        //bool isWalking = rb.velocity.x != 0 || rb.velocity.y != 0;
+        //bool isWalking = rb.velocity.x != 0 || rb.velocity.y != 0;
+        anim.SetBool("Walking", xAxis != 0);
+
+        // Define animações de direção vertical
+        anim.SetBool("walking_up", yAxis > 0);
+        anim.SetBool("walking_down", yAxis < 0);
     }
 
 

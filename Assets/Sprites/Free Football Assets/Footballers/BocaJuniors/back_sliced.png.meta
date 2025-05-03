@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c328e56637cbfac4db4efcf5833f6b4a
+guid: b6082a89d786c194a89d6d06529b35b0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5876582003495451361
-    second: mapa-nuvem_0
+      213: -4571828015118065507
+    second: back_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,22 +100,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mapa-nuvem_0
+      name: back_sliced_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1536
-        height: 1008
+        width: 13
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1eabccb5230dd8150800000000000000
-      internalID: 5876582003495451361
+      spriteID: a629fa9e87cba0b4cbbed8167eeeaf0f
+      internalID: -53470991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: back_sliced_1
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 0
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b18c1acb6ec5b469a230a38c88acc5
+      internalID: 1946124935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: back_sliced_2
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 0
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93dfa70b1d979454aa8d8e74cd482696
+      internalID: 1433900010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: back_sliced_3
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 0
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8525aa35be0c04247a5d2131c9bee35e
+      internalID: -9928820
       vertices: []
       indices: 
       edges: []
@@ -123,7 +186,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a3e51d8898510134dbe212e5148f6616
     internalID: 0
     vertices: []
     indices: 
@@ -131,7 +194,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      mapa-nuvem_0: 5876582003495451361
+      back_sliced_0: -53470991
+      back_sliced_1: 1946124935
+      back_sliced_2: 1433900010
+      back_sliced_3: -9928820
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
