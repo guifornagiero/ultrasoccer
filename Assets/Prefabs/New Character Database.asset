@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf13cc169b7d0d24e91013071dcd7d82, type: 3}
+  m_Name: New Character Database
+  m_EditorClassIdentifier: 
+  character:
+  - characterName: bento
+    characterSprite: {fileID: 8793639957104055765, guid: c3435f3adf034e34fa7f8c0abca48633, type: 3}
+  - characterName: player2
+    characterSprite: {fileID: 8793639957104055765, guid: 799588d945660544cab9d76f7c36c002, type: 3}
+  - characterName: player3
+    characterSprite: {fileID: 8793639957104055765, guid: 2fcdec7e326c2174ba6adaad86f832aa, type: 3}
+  - characterName: player4
+    characterSprite: {fileID: 8793639957104055765, guid: fc15bf101c47a284c879d47eb3d7d29b, type: 3}
+  - characterName: player5
+    characterSprite: {fileID: 8793639957104055765, guid: 86b83cc314d296146857d8737876a050, type: 3}
