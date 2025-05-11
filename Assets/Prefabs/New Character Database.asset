@@ -15,11 +15,21 @@ MonoBehaviour:
   character:
   - characterName: bento
     characterSprite: {fileID: 8793639957104055765, guid: c3435f3adf034e34fa7f8c0abca48633, type: 3}
+    prefabPersonagem: {fileID: 2200608480879588330, guid: f101cb4d9f320b842b11933489e6b522, type: 3}
+    prefabIA: {fileID: 6817730872767572303, guid: edbcbe1b281355c4ab3fc644fbf3772a, type: 3}
   - characterName: vini
     characterSprite: {fileID: 1115573568, guid: 8e443944d55afc64eab4466691e7284b, type: 3}
+    prefabPersonagem: {fileID: 0}
+    prefabIA: {fileID: 0}
   - characterName: marcin
     characterSprite: {fileID: 1626234130, guid: 6b37c4bc2bd45364aa2e5e8c1e21d9f6, type: 3}
+    prefabPersonagem: {fileID: 0}
+    prefabIA: {fileID: 0}
   - characterName: gui
     characterSprite: {fileID: -1967149190, guid: 4bc870e935d2e2a44818f36fc2b2f213, type: 3}
+    prefabPersonagem: {fileID: 0}
+    prefabIA: {fileID: 0}
   - characterName: silva
     characterSprite: {fileID: 707543682, guid: 2ace2ddc4ec2a9849852deffa40d8508, type: 3}
+    prefabPersonagem: {fileID: 0}
+    prefabIA: {fileID: 0}

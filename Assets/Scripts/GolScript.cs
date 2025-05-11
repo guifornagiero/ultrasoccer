@@ -1,22 +1,40 @@
 using UnityEngine;
 using System.Collections;
 
-
 public class Gol : MonoBehaviour
 {
     [SerializeField] private Transform bola;
     [SerializeField] private Transform meioCampo;
-    [SerializeField] private Transform jogadorEsquerdo;
-    [SerializeField] private Transform jogadorDireito;
     [SerializeField] private bool golEsquerdo;
+
+    private Transform jogadorEsquerdo;
+    private Transform jogadorDireito;
 
     void Start()
     {
         bola.position = meioCampo.position;
-        jogadorEsquerdo.position = new Vector2(-5f, 0f);
-        jogadorDireito.position = new Vector2(5f, 0f);
+        StartCoroutine(SetupJogadoresComDelay());
     }
+    private IEnumerator SetupJogadoresComDelay()
+    {
+        yield return new WaitForSeconds(0.1f); // tempo para garantir que os jogadores foram instanciados
 
+        GameObject objEsquerdo = GameObject.Find("JogadorEsquerdo");
+        GameObject objDireito = GameObject.Find("JogadorDireito");
+
+        if (objEsquerdo != null && objDireito != null)
+        {
+            jogadorEsquerdo = objEsquerdo.transform;
+            jogadorDireito = objDireito.transform;
+
+            jogadorEsquerdo.position = new Vector2(-5f, 0f);
+            jogadorDireito.position = new Vector2(5f, 0f);
+        }
+        else
+        {
+            Debug.LogError("Jogadores não encontrados na cena!");
+        }
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Ball"))
@@ -35,11 +53,18 @@ public class Gol : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         bola.position = meioCampo.position;
-        jogadorEsquerdo.position = new Vector2(-5f, 0f);
-        jogadorDireito.position = new Vector2(5f, 0f);
+
+        if (jogadorEsquerdo != null && jogadorDireito != null)
+        {
+            jogadorEsquerdo.position = new Vector2(-5f, 0f);
+            jogadorDireito.position = new Vector2(5f, 0f);
+        }
 
         Rigidbody2D rbBola = bola.GetComponent<Rigidbody2D>();
-        rbBola.velocity = Vector2.zero;
-        rbBola.angularVelocity = 0f;
+        if (rbBola != null)
+        {
+            rbBola.velocity = Vector2.zero;
+            rbBola.angularVelocity = 0f;
+        }
     }
 }

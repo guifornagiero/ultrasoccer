@@ -10,23 +10,40 @@ public class BentoScript : PlayerScript
     [SerializeField] private float dashCooldown = 1f;
 
     [Header("Ult Settings:")]
-    [SerializeField] private float ultCooldownTime = 90f; // 2 minutos
+    [SerializeField] private float ultCooldownTime = 20f; // 2 minutos
     private float timeRemainingForUlt;
 
     private bool isDashing;
     private Vector2 lastMoveDirection = Vector2.right; // Dire��o inicial (para a direita)
 
     [Header("UI")]
-    [SerializeField] private TextMeshPro ultCooldownText; // Refer�ncia ao texto que vai mostrar o cooldown
+    private TextMeshPro ultCooldownText; // Refer�ncia ao texto que vai mostrar o cooldown
 
     void Start()
     {
-        timeRemainingForUlt = ultCooldownTime; // Inicializa o tempo restante com o tempo do cooldown da ult
+        timeRemainingForUlt = ultCooldownTime;
+        StartCoroutine(SetupCooldownText());
+    }
+    private IEnumerator SetupCooldownText()
+    {
+        // Espera até que o objeto "Cooldown" exista na cena
+        while (ultCooldownText == null)
+        {
+            GameObject textoGO = GameObject.Find("Cooldown");
+            if (textoGO != null)
+            {
+                ultCooldownText = textoGO.GetComponent<TextMeshPro>();
+            }
+            yield return null; // Espera o próximo frame
+        }
+
+        // Quando encontrar, atualiza o texto inicial
         if (ultCooldownText != null)
         {
             ultCooldownText.text = FormatTime(timeRemainingForUlt);
         }
     }
+
 
     void Update()
     {

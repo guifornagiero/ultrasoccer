@@ -18,15 +18,28 @@ public class PlayerScript : MonoBehaviour
 
     void Start()
     {
+        // Inicializa o Rigidbody e Animator
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
+        // Verifica se a opção foi salva no PlayerPrefs, caso contrário, usa a opção padrão
         if(!PlayerPrefs.HasKey("selectedOption")){
             selectedOption = 0;
         }
         else{
             Load();
         }
-        UpdateCharacter(selectedOption);
+
+        // Verifica se o banco de dados de personagens está atribuído
+        if (characterDB != null && characterDB.CharacterCount > 0)
+        {
+            UpdateCharacter(selectedOption);
+        }
+        else
+        {
+            
+            Debug.LogError("CharacterDatabase não está atribuído ou está vazio!");
+        }
     }
 
     void Update()
@@ -46,14 +59,11 @@ public class PlayerScript : MonoBehaviour
     void Move()
     {
         rb.velocity = new Vector2(walkSpeed * xAxis, walkSpeed * yAxis);
-        //verifica se o player esta andando
+        // Verifica se o player está andando
         anim.SetBool("Walking", xAxis != 0);
-
-        // verifica se o player esta andando para cima ou para baixo
         anim.SetBool("walking_up", yAxis > 0);
         anim.SetBool("walking_down", yAxis < 0);
     }
-
 
     void Flip()
     {
@@ -79,12 +89,30 @@ public class PlayerScript : MonoBehaviour
             }
         }
     }
-    private void UpdateCharacter(int selectedOption){
-        Character character = characterDB.GetCharacter(selectedOption);
-        artworkSprite.sprite = character.characterSprite;
+
+    private void UpdateCharacter(int selectedOption)
+    {
+        // Adiciona verificação para garantir que o índice seja válido
+        if (selectedOption >= 0 && selectedOption < characterDB.CharacterCount)
+        {
+            Character character = characterDB.GetCharacter(selectedOption);
+            if (character != null && character.characterSprite != null)
+            {
+                artworkSprite.sprite = character.characterSprite;
+            }
+            else
+            {
+                Debug.LogError("O personagem ou o sprite do personagem está ausente!");
+            }
+        }
+        else
+        {
+            Debug.LogError("Índice de personagem inválido: " + selectedOption);
+        }
     }
 
-    private void Load(){
+    private void Load()
+    {
         selectedOption = PlayerPrefs.GetInt("selectedOption");
     }
 }
