@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    public CharacterDatabase characterDB;
+    public SpriteRenderer artworkSprite;
+    private int selectedOption = 0;
     [Header("Horizontal Movement Settings: ")]
     [SerializeField] private float walkSpeed = 1;
     protected float xAxis, yAxis;
@@ -17,6 +20,13 @@ public class PlayerScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        if(!PlayerPrefs.HasKey("selectedOption")){
+            selectedOption = 0;
+        }
+        else{
+            Load();
+        }
+        UpdateCharacter(selectedOption);
     }
 
     void Update()
@@ -68,5 +78,13 @@ public class PlayerScript : MonoBehaviour
                 bola.GetComponent<Rigidbody2D>().AddForce(direcao * forcaChute, ForceMode2D.Impulse);
             }
         }
+    }
+    private void UpdateCharacter(int selectedOption){
+        Character character = characterDB.GetCharacter(selectedOption);
+        artworkSprite.sprite = character.characterSprite;
+    }
+
+    private void Load(){
+        selectedOption = PlayerPrefs.GetInt("selectedOption");
     }
 }
