@@ -35,18 +35,22 @@ public class Gol : MonoBehaviour
             Debug.LogError("Jogadores não encontrados na cena!");
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
+{
+    if (other.CompareTag("Ball"))
     {
-        if (other.CompareTag("Ball"))
+        if (golEsquerdo)
         {
-            if (golEsquerdo)
-                Debug.Log("Gol da direita!");
-            else
-                Debug.Log("Gol da esquerda!");
-
-            StartCoroutine(ResetarPosicoesComDelay());
+            ScoreManager.Instance.GolDireito(); // Gol na esquerda → ponto para o time direito
         }
+        else
+        {
+            ScoreManager.Instance.GolEsquerdo(); // Gol na direita → ponto para o time esquerdo
+        }
+
+        StartCoroutine(ResetarPosicoesComDelay());
     }
+}
 
     private IEnumerator ResetarPosicoesComDelay()
     {
