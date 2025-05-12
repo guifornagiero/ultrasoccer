@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      campo-lua-grande_0: -6774319722522796653
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

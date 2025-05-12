@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1890797846873957544}
   - component: {fileID: 5124034971254326444}
   - component: {fileID: 554801972107768462}
-  - component: {fileID: 7117035246281084745}
+  - component: {fileID: 5850667788439286894}
   m_Layer: 0
   m_Name: marcin
   m_TagString: Player
@@ -206,7 +206,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.15, y: 0.19}
   m_EdgeRadius: 0
---- !u!114 &7117035246281084745
+--- !u!114 &5850667788439286894
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2200608480879588330}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ca354071e072434ab677ea4a0dae4c5, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f5a8de8a1b5a8f42947009475126435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterDB: {fileID: 11400000, guid: 478031f2364efeb4892ff6b12286caf2, type: 2}
@@ -226,8 +226,6 @@ MonoBehaviour:
   ballLayer:
     serializedVersion: 2
     m_Bits: 8
-  canDash: 1
-  dashSpeed: 10
-  dashTime: 0.2
-  dashCooldown: 1
-  ultCooldownTime: 90
+  ultSpeedMultiplier: 1.7
+  ultDuration: 5
+  ultCooldownTime: 60

@@ -202,7 +202,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      corinthians_walk_0: 2917943118558390617
+      corinthians_walk_1: -7730154261557490309
+      corinthians_walk_2: -5201239503422748544
+      corinthians_walk_3: 3816441202379370846
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

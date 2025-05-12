@@ -16,6 +16,10 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private float alcanceChute = 3f;
     [SerializeField] private LayerMask ballLayer;
 
+    [Header("Campo Limits")]
+    private float minX = -8.5f, maxX = 9f; // Limites horizontais (x)
+    private float minY = -3f, maxY = 1.8f; // Limites verticais (y)
+
     void Start()
     {
         // Inicializa o Rigidbody e Animator
@@ -48,6 +52,15 @@ public class PlayerScript : MonoBehaviour
         Move();
         Flip();
         Kick();
+
+        // Limita a posição do jogador no eixo X
+        float clampedX = Mathf.Clamp(transform.position.x, minX, maxX);
+
+        // Limita a posição do jogador no eixo Y
+        float clampedY = Mathf.Clamp(transform.position.y, minY, maxY);
+
+        // Aplica a posição corrigida ao jogador
+        transform.position = new Vector3(clampedX, clampedY, transform.position.z);
     }
 
     void GetInputs()
@@ -109,6 +122,16 @@ public class PlayerScript : MonoBehaviour
         {
             Debug.LogError("Índice de personagem inválido: " + selectedOption);
         }
+    }
+
+    public void SetKickMultiplier(float multiplier)
+    {
+        forcaChute = 8f * multiplier; // 8f é o valor base
+    }
+
+    public void SetSpeedMultiplier(float multiplier)
+    {
+        walkSpeed = 4.3f * multiplier; // 1f é o valor base (ajuste se o valor base for outro)
     }
 
     private void Load()

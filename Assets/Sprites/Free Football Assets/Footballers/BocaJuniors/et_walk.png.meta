@@ -202,7 +202,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      et_walk_0: -5961504640685514276
+      et_walk_1: -5779057154528615742
+      et_walk_2: 440079620134178995
+      et_walk_3: -1131586361064368933
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
