@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 8112387080911732317}
   - component: {fileID: 4433995147299255894}
   - component: {fileID: 5600503627531937628}
-  - component: {fileID: 6065777961237442421}
+  - component: {fileID: 1917315702591576122}
   - component: {fileID: 1580337139621167271}
   m_Layer: 0
-  m_Name: Player_marcin
-  m_TagString: Enemy
+  m_Name: ET Milho
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1115573568, guid: 8e443944d55afc64eab4466691e7284b, type: 3}
+  m_Sprite: {fileID: 261210715114370395, guid: 93c6a19af218cc04fb6f193dbba6a4ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +100,7 @@ Animator:
   m_GameObject: {fileID: 6817730872767572303}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9ba4862a8708ca1468334ac94f18abf7, type: 2}
+  m_Controller: {fileID: 9100000, guid: cbd99eecdf985e9468ca218ad6cd2acb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -139,7 +139,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6065777961237442421
+--- !u!114 &1917315702591576122
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,14 +148,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6817730872767572303}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb03db8e03e22144599c048e474b2f16, type: 3}
+  m_Script: {fileID: 11500000, guid: abfcf0eef0f25c745aea2e63a8710e21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterDB: {fileID: 0}
-  artworkSprite: {fileID: 0}
-  walkSpeed: 2.5
+  characterDB: {fileID: 11400000, guid: 478031f2364efeb4892ff6b12286caf2, type: 2}
+  artworkSprite: {fileID: 8112387080911732317}
+  walkSpeed: 4.3
   forcaChute: 8
-  alcanceChute: 0.5
+  alcanceChute: 1
   ballLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -193,7 +193,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.07505518}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -203,5 +203,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.15, y: 0.03988963}
+  m_Size: {x: 0.15, y: 0.19}
   m_EdgeRadius: 0

@@ -29,7 +29,3 @@ MonoBehaviour:
     characterSprite: {fileID: -1967149190, guid: 4bc870e935d2e2a44818f36fc2b2f213, type: 3}
     prefabPersonagem: {fileID: 2200608480879588330, guid: 8d65a5d8b5ea65047a41e3474148c54f, type: 3}
     prefabIA: {fileID: 6817730872767572303, guid: 7e5232294c3f2244880bdd8bdb6b6a02, type: 3}
-  - characterName: silva
-    characterSprite: {fileID: 707543682, guid: 2ace2ddc4ec2a9849852deffa40d8508, type: 3}
-    prefabPersonagem: {fileID: 0}
-    prefabIA: {fileID: 0}

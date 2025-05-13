@@ -1,20 +1,16 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using TMPro; // Para usar TextMeshPro
 
-public class BentoScript : PlayerScript
+public class GuiScript : PlayerScript
 {
-    public bool canDash = true;
-    [SerializeField] private float dashSpeed = 10f;
-    [SerializeField] private float dashTime = 0.2f;
-    [SerializeField] private float dashCooldown = 1f;
+    [SerializeField] private float ultKickMultiplier = 2f; // Multiplicador de força
+    [SerializeField] private float ultDuration = 5f; // Duração da ULT
+    private bool isUltActive = false;
 
     [Header("Ult Settings:")]
-    [SerializeField] private float ultCooldownTime = 20f; 
+    [SerializeField] private float ultCooldownTime = 20f;
     private float timeRemainingForUlt;
-
-    private bool isDashing;
-    private Vector2 lastMoveDirection = Vector2.right; // Dire��o inicial (para a direita)
 
     [Header("UI")]
     private TextMeshPro ultCooldownText; // Refer�ncia ao texto que vai mostrar o cooldown
@@ -65,12 +61,6 @@ public class BentoScript : PlayerScript
             }
         }
 
-        // Atualiza a dire��o do movimento
-        if (xAxis != 0 || yAxis != 0)
-        {
-            lastMoveDirection = new Vector2(xAxis, yAxis).normalized;
-        }
-
         // Atualiza a posi��o do contador para ficar acima do personagem
         if (ultCooldownText != null)
         {
@@ -78,33 +68,34 @@ public class BentoScript : PlayerScript
         }
 
         // Ativar o dash e reiniciar o cooldown quando pressionar R
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && !isDashing && timeRemainingForUlt <= 0)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && timeRemainingForUlt <= 0)
         {
-            StartCoroutine(Dash());
+            StartCoroutine(SuperKick());
         }
     }
 
-    IEnumerator Dash()
+    IEnumerator SuperKick()
     {
-        canDash = false;
-        isDashing = true;
-
-        // Movimenta o jogador na dire��o do �ltimo movimento
-        float dashTimer = 0f;
-        while (dashTimer < dashTime)
+        // Ativa o modo ULT por alguns segundos
+        isUltActive = true;
+        PlayerScript playerScript = GetComponent<PlayerScript>();
+        if (playerScript != null)
         {
-            transform.position += (Vector3)(lastMoveDirection * dashSpeed * Time.deltaTime);
-            dashTimer += Time.deltaTime;
-            yield return null;
+            playerScript.SetKickMultiplier(ultKickMultiplier);
         }
 
-        isDashing = false;
-
-        // Reinicia o cooldown da ult (2 minutos) ap�s usar a habilidade
+        // Reinicia o cooldown da ult
         timeRemainingForUlt = ultCooldownTime;
 
-        yield return new WaitForSeconds(dashCooldown);
-        canDash = true;
+        yield return new WaitForSeconds(ultDuration);
+
+        // Desativa o modo ULT
+        isUltActive = false;
+        if (playerScript != null)
+        {
+            playerScript.SetKickMultiplier(1f); // volta ao normal
+        }
+
     }
 
     // Fun��o para formatar o tempo restante em minutos e segundos

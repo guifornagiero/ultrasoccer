@@ -230,5 +230,4 @@ MonoBehaviour:
   dashSpeed: 10
   dashTime: 0.2
   dashCooldown: 1
-  ultCooldownTime: 90
-  ultCooldownText: {fileID: 9048590814066670384, guid: acfca5415a6be9246baab73c2745c099, type: 3}
+  ultCooldownTime: 60
