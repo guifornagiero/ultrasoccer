@@ -226,6 +226,6 @@ MonoBehaviour:
   ballLayer:
     serializedVersion: 2
     m_Bits: 8
-  attractionForce: 10
-  ultDuration: 2.5
-  ultCooldownTime: 1
+  attractionForce: 1
+  ultDuration: 0.5
+  ultCooldownTime: 10
