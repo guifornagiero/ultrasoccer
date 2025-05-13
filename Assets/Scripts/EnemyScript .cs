@@ -108,9 +108,18 @@ public class EnemyScript : MonoBehaviour
             anim.SetBool("walking_down", yAxis < 0);
             
         }
-        if (ballPos.x+1 <= transform.position.x)
+        if (ballPos.x <= transform.position.x)
         {
             Debug.Log("Bola a atras do inimigo");
+            var ballPredict = ballPos;
+            if (transform.position.y > ballPos.y)
+            {
+                ballPredict.y += 0.6f;
+            }
+            else
+            {
+                ballPredict.y -= 0.2f;
+            }
             pos = Vector3.MoveTowards(transform.position, ballPos, walkSpeed * Time.deltaTime);
         }
 
@@ -137,7 +146,7 @@ public class EnemyScript : MonoBehaviour
         if (bola != null && bola.CompareTag("Ball") && kickDelay == false && ballPos.x <= transform.position.x)
         {
             Debug.Log("Chute");
-            Vector2 direcao = GoalPosition.normalized;
+            Vector2 direcao = (GoalPosition - ballPos).normalized;
             bola.GetComponent<Rigidbody2D>().AddForce(direcao * forcaChute, ForceMode2D.Impulse);
             kickDelay = true;
             StartCoroutine(KickDelay(0.2f));

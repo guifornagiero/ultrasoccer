@@ -220,7 +220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterDB: {fileID: 11400000, guid: 478031f2364efeb4892ff6b12286caf2, type: 2}
   artworkSprite: {fileID: 2000154506948348956}
-  walkSpeed: 1
+  walkSpeed: 10
   forcaChute: 8
   alcanceChute: 3
   ballLayer:

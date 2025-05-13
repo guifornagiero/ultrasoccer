@@ -13,8 +13,6 @@ public class CharacterSpawner : MonoBehaviour
         {
             GameObject jogadorEsquerdo = Instantiate(character.prefabPersonagem, transform.position, Quaternion.identity);
             jogadorEsquerdo.name = "JogadorEsquerdo";
-            GameObject jogadorDireito = Instantiate(character.prefabIA, transform.position, Quaternion.identity);
-            jogadorDireito.name = "JogadorDireito";
     }
         else
     {

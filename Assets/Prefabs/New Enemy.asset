@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf13cc169b7d0d24e91013071dcd7d82, type: 3}
+  m_Name: New Enemy
+  m_EditorClassIdentifier: 
+  character:
+  - characterName: ET do milharal
+    characterSprite: {fileID: 707543682, guid: 2ace2ddc4ec2a9849852deffa40d8508, type: 3}
+    prefabPersonagem: {fileID: 6817730872767572303, guid: 628364bbe8da0d9428cf67b5bf46d742, type: 3}
