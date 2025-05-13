@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 8112387080911732317}
   - component: {fileID: 4433995147299255894}
   - component: {fileID: 5600503627531937628}
-  - component: {fileID: 1917315702591576122}
+  - component: {fileID: 6065777961237442421}
   - component: {fileID: 1580337139621167271}
   m_Layer: 0
   m_Name: Player_marcin
-  m_TagString: Player
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,7 +139,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1917315702591576122
+--- !u!114 &6065777961237442421
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,14 +148,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6817730872767572303}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abfcf0eef0f25c745aea2e63a8710e21, type: 3}
+  m_Script: {fileID: 11500000, guid: bb03db8e03e22144599c048e474b2f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterDB: {fileID: 11400000, guid: 478031f2364efeb4892ff6b12286caf2, type: 2}
-  artworkSprite: {fileID: 8112387080911732317}
-  walkSpeed: 4.3
+  characterDB: {fileID: 0}
+  artworkSprite: {fileID: 0}
+  walkSpeed: 2.5
   forcaChute: 8
-  alcanceChute: 1
+  alcanceChute: 0.5
   ballLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -193,7 +193,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.07505518}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -203,5 +203,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.15, y: 0.19}
+  m_Size: {x: 0.15, y: 0.03988963}
   m_EdgeRadius: 0
