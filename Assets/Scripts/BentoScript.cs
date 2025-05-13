@@ -4,12 +4,11 @@ using TMPro; // Para usar TextMeshPro
 
 public class BentoScript : PlayerScript
 {
+    [Header("Ult Settings:")]
     public bool canDash = true;
     [SerializeField] private float dashSpeed = 10f;
     [SerializeField] private float dashTime = 0.2f;
     [SerializeField] private float dashCooldown = 1f;
-
-    [Header("Ult Settings:")]
     [SerializeField] private float ultCooldownTime = 20f; 
     private float timeRemainingForUlt;
 

@@ -155,8 +155,8 @@ MonoBehaviour:
   characterDB: {fileID: 11400000, guid: 478031f2364efeb4892ff6b12286caf2, type: 2}
   artworkSprite: {fileID: 2000154506948348956}
   walkSpeed: 4.3
-  forcaChute: 8
-  alcanceChute: 1
+  forcaChute: 15
+  alcanceChute: 1.2
   ballLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -220,12 +220,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterDB: {fileID: 0}
   artworkSprite: {fileID: 0}
-  walkSpeed: 1
-  forcaChute: 8
-  alcanceChute: 3
+  walkSpeed: 4.3
+  forcaChute: 15
+  alcanceChute: 1.2
   ballLayer:
     serializedVersion: 2
     m_Bits: 8
   ultKickMultiplier: 2
   ultDuration: 5
-  ultCooldownTime: 60
+  ultCooldownTime: 20

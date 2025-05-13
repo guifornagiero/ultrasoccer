@@ -13,19 +13,15 @@ MonoBehaviour:
   m_Name: New Character Database
   m_EditorClassIdentifier: 
   character:
-  - characterName: bento
+  - characterName: Bento
     characterSprite: {fileID: 707543682, guid: 2ace2ddc4ec2a9849852deffa40d8508, type: 3}
     prefabPersonagem: {fileID: 2200608480879588330, guid: f101cb4d9f320b842b11933489e6b522, type: 3}
-    prefabIA: {fileID: 6817730872767572303, guid: edbcbe1b281355c4ab3fc644fbf3772a, type: 3}
-  - characterName: vini
+  - characterName: Vini
     characterSprite: {fileID: 1626234130, guid: 6b37c4bc2bd45364aa2e5e8c1e21d9f6, type: 3}
     prefabPersonagem: {fileID: 2200608480879588330, guid: 5dd8d62a00109064f8b8a201ab17a857, type: 3}
-    prefabIA: {fileID: 1530316400122986066, guid: 6315f4e1f4ddde54589cdc3472ad9c0f, type: 3}
-  - characterName: marcin
+  - characterName: Marcin
     characterSprite: {fileID: -1662383851, guid: 1d30a19dd06a0a64e9caabed84236edc, type: 3}
     prefabPersonagem: {fileID: 2200608480879588330, guid: 973c4eddae9572f40aa26a7934b5e578, type: 3}
-    prefabIA: {fileID: 6817730872767572303, guid: edbcbe1b281355c4ab3fc644fbf3772a, type: 3}
-  - characterName: gui
+  - characterName: Gui
     characterSprite: {fileID: -1967149190, guid: 4bc870e935d2e2a44818f36fc2b2f213, type: 3}
     prefabPersonagem: {fileID: 2200608480879588330, guid: 8d65a5d8b5ea65047a41e3474148c54f, type: 3}
-    prefabIA: {fileID: 6817730872767572303, guid: 7e5232294c3f2244880bdd8bdb6b6a02, type: 3}

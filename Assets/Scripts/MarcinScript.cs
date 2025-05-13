@@ -4,11 +4,11 @@ using TMPro;
 
 public class MarcinScript : PlayerScript
 {
+    [Header("Ult Settings:")]
     [SerializeField] private float ultSpeedMultiplier = 1.5f; // Multiplicador de velocidade
     [SerializeField] private float ultDuration = 5f;
     private bool isUltActive = false;
 
-    [Header("Ult Settings:")]
     [SerializeField] private float ultCooldownTime = 20f;
     private float timeRemainingForUlt;
 

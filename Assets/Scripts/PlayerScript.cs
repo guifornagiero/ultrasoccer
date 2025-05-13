@@ -6,14 +6,14 @@ public class PlayerScript : MonoBehaviour
     public SpriteRenderer artworkSprite;
     private int selectedOption = 0;
     [Header("Horizontal Movement Settings: ")]
-    [SerializeField] private float walkSpeed = 1;
+    [SerializeField] private float walkSpeed = 4.3f;
     protected float xAxis, yAxis;
     protected Rigidbody2D rb;
     private Animator anim;
 
     [Header("Kick Settings: ")]
-    [SerializeField] private float forcaChute = 8f;
-    [SerializeField] private float alcanceChute = 3f;
+    [SerializeField] private float forcaChute = 15f;
+    [SerializeField] private float alcanceChute = 1.2f;
     [SerializeField] private LayerMask ballLayer;
 
     [Header("Campo Limits")]

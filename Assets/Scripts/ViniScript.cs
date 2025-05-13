@@ -4,12 +4,12 @@ using TMPro;
 
 public class ViniScript : PlayerScript
 {
+    [Header("Ult Settings:")]
     [SerializeField] private float attractionForce = 100f;
     [SerializeField] private float ultDuration = 5f;
     private GameObject ball;
     private bool isUltActive = false;
 
-    [Header("Ult Settings:")]
     [SerializeField] private float ultCooldownTime = 20f;
     private float timeRemainingForUlt;
 

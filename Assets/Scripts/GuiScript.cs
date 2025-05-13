@@ -4,11 +4,11 @@ using TMPro; // Para usar TextMeshPro
 
 public class GuiScript : PlayerScript
 {
+    [Header("Ult Settings:")]
     [SerializeField] private float ultKickMultiplier = 2f; // Multiplicador de força
     [SerializeField] private float ultDuration = 5f; // Duração da ULT
     private bool isUltActive = false;
 
-    [Header("Ult Settings:")]
     [SerializeField] private float ultCooldownTime = 20f;
     private float timeRemainingForUlt;
 
