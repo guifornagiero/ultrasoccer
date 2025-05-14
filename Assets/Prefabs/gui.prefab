@@ -226,6 +226,6 @@ MonoBehaviour:
   ballLayer:
     serializedVersion: 2
     m_Bits: 8
-  ultKickMultiplier: 2
-  ultDuration: 5
-  ultCooldownTime: 10
+  ultKickMultiplier: 3.5
+  ultDuration: 3
+  ultCooldownTime: 4

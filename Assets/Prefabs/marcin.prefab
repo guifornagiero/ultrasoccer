@@ -227,5 +227,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   ultSpeedMultiplier: 1.7
-  ultDuration: 5
-  ultCooldownTime: 20
+  ultDuration: 2
+  ultCooldownTime: 4

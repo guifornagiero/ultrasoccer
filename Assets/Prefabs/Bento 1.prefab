@@ -230,4 +230,4 @@ MonoBehaviour:
   dashSpeed: 10
   dashTime: 0.2
   dashCooldown: 1
-  ultCooldownTime: 20
+  ultCooldownTime: 4
