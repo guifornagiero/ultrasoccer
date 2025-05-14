@@ -2284,7 +2284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3992fa5e7ab798e47b6fdf785c1ec2f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempoTotal: 180
+  tempoTotal: 15
   tempoTexto: {fileID: 149398684}
   faseAtual: 
   preFase2: Pre Fase 2

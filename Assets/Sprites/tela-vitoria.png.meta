@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tela-vitoria_0: -1531751430518858767
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

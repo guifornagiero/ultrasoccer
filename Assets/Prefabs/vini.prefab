@@ -228,4 +228,4 @@ MonoBehaviour:
     m_Bits: 8
   attractionForce: 1
   ultDuration: 0.75
-  ultCooldownTime: 10
+  ultCooldownTime: 2

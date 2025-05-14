@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 48947601}
   - component: {fileID: 48947604}
   - component: {fileID: 48947602}
+  - component: {fileID: 48947605}
   m_Layer: 5
   m_Name: DialogBox
   m_TagString: Untagged
@@ -154,8 +155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 41, y: -77}
-  m_SizeDelta: {x: -13.41, y: -1271.97}
+  m_AnchoredPosition: {x: -33.869995, y: -364.95996}
+  m_SizeDelta: {x: 349.69, y: -729.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &48947602
 MonoBehaviour:
@@ -172,11 +173,40 @@ MonoBehaviour:
   textComponent: {fileID: 360395402}
   characterImage: {fileID: 952236363}
   dialogueLines:
-  - text: Tira uma foto nossa aqui no milharal
-    characterSprite: {fileID: 588458005, guid: 93c6a19af218cc04fb6f193dbba6a4ee, type: 3}
-  - text: Meu deus
+  - text: 'VINI: Coe rapaziada, vamo jogar bola?'
+    characterSprite: {fileID: 1626234130, guid: 6b37c4bc2bd45364aa2e5e8c1e21d9f6, type: 3}
+  - text: 'GUI: Bora'
+    characterSprite: {fileID: -1967149190, guid: 4bc870e935d2e2a44818f36fc2b2f213, type: 3}
+  - text: 'MARCIN: Bora'
+    characterSprite: {fileID: 683075702, guid: 8e443944d55afc64eab4466691e7284b, type: 3}
+  - text: 'BENTO: Bora'
     characterSprite: {fileID: 707543682, guid: 2ace2ddc4ec2a9849852deffa40d8508, type: 3}
+  - text: '???: Bora'
+    characterSprite: {fileID: 261210715114370395, guid: 93c6a19af218cc04fb6f193dbba6a4ee, type: 3}
+  - text: 'MARCIN: ???'
+    characterSprite: {fileID: -1662383851, guid: 1d30a19dd06a0a64e9caabed84236edc, type: 3}
+  - text: "BENTO: Que que \xE9 isso...."
+    characterSprite: {fileID: 2917943118558390617, guid: b856777f1a80f86408f45bd6d5a6dcd0, type: 3}
+  - text: 'ET: Somos os ETS do milharal. '
+    characterSprite: {fileID: 261210715114370395, guid: 93c6a19af218cc04fb6f193dbba6a4ee, type: 3}
+  - text: 'ET: Viemos conquistar a terra a partir de sua batalha mais importante...'
+    characterSprite: {fileID: 261210715114370395, guid: 93c6a19af218cc04fb6f193dbba6a4ee, type: 3}
+  - text: 'GUI: Truco?'
+    characterSprite: {fileID: 624694253, guid: aa282f1082324634186fd2253564604c, type: 3}
+  - text: "ET: N\xC3O!!! O FUTEBOL!!!!"
+    characterSprite: {fileID: -5961504640685514276, guid: 00ebd123d6fc7c54f8c17100ae90ef7f, type: 3}
+  - text: 'ET: honraremos nossos mestres na LUA'
+    characterSprite: {fileID: 261210715114370395, guid: 93c6a19af218cc04fb6f193dbba6a4ee, type: 3}
+  - text: 'ET: Vamos mostrar que no milharal so joga quem pode.'
+    characterSprite: {fileID: 261210715114370395, guid: 93c6a19af218cc04fb6f193dbba6a4ee, type: 3}
   textSpeed: 0.1
+  faseAtual: 
+  preFase1: Pre Fase 1
+  preFase2: Pre Fase 2
+  preFase3: Pre Fase 3
+  fase1: Fase_1
+  fase2: Fase_2
+  fase3: Fase_3
 --- !u!222 &48947604
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -185,6 +215,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48947600}
   m_CullTransparentMesh: 0
+--- !u!114 &48947605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48947600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &119170434
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,9 +370,9 @@ RectTransform:
   m_Father: {fileID: 48947601}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.000015259}
-  m_SizeDelta: {x: 1500, y: 300}
+  m_AnchorMax: {x: 0.5, y: 0.63420045}
+  m_AnchoredPosition: {x: 16, y: -107}
+  m_SizeDelta: {x: 1500, y: 338}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &360395402
 MonoBehaviour:
@@ -399,7 +459,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 266.12265, y: 0, z: 332.65338, w: 0}
+  m_margin: {x: 266.12265, y: 0, z: 332.65338, w: 179.5627}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -663,8 +723,8 @@ Transform:
   m_GameObject: {fileID: 847231718}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0114, y: -0.0175, z: 0}
-  m_LocalScale: {x: 1.3688433, y: 0.965361, z: 0.878}
+  m_LocalPosition: {x: -0.29, y: -0.0307, z: 0}
+  m_LocalScale: {x: 1.3688433, y: 0.9769453, z: 0.878}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -703,7 +763,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -449, y: -63}
+  m_AnchoredPosition: {x: -462, y: -122}
   m_SizeDelta: {x: 81.88, y: 81.878}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &952236363

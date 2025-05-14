@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tela-derrota_0: 2739632469564507776
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -16,16 +16,16 @@ MonoBehaviour:
   - characterName: Bento
     characterSprite: {fileID: 707543682, guid: 2ace2ddc4ec2a9849852deffa40d8508, type: 3}
     prefabPersonagem: {fileID: 2200608480879588330, guid: f101cb4d9f320b842b11933489e6b522, type: 3}
-    description: Desc bento
+    description: Possui um DASH para armar jogadas
   - characterName: Vini
     characterSprite: {fileID: 1626234130, guid: 6b37c4bc2bd45364aa2e5e8c1e21d9f6, type: 3}
     prefabPersonagem: {fileID: 2200608480879588330, guid: 5dd8d62a00109064f8b8a201ab17a857, type: 3}
-    description: Desc vini
+    description: "Atrai a bola para seu p\xE9, bem fominha mesmo..."
   - characterName: Marcin
     characterSprite: {fileID: -1662383851, guid: 1d30a19dd06a0a64e9caabed84236edc, type: 3}
     prefabPersonagem: {fileID: 2200608480879588330, guid: 973c4eddae9572f40aa26a7934b5e578, type: 3}
-    description: Desc marcin
+    description: Super velocidade, quero ver seguir o ritmo.
   - characterName: Gui
     characterSprite: {fileID: -1967149190, guid: 4bc870e935d2e2a44818f36fc2b2f213, type: 3}
     prefabPersonagem: {fileID: 2200608480879588330, guid: 8d65a5d8b5ea65047a41e3474148c54f, type: 3}
-    description: Desc Gui
+    description: "Super chute, corre que \xE9 bica"
