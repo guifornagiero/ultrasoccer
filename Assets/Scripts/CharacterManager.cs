@@ -9,6 +9,7 @@ public class CharacterManager : MonoBehaviour
     public CharacterDatabase characterDB;
     // Start is called before the first frame update
     public Text nameText;
+    public Text descriptionText;
     public SpriteRenderer artworkSprite;
 
     private int selectedOption = 0;
@@ -47,6 +48,7 @@ public class CharacterManager : MonoBehaviour
         Character character = characterDB.GetCharacter(selectedOption);
         artworkSprite.sprite = character.characterSprite;
         nameText.text = character.characterName;
+        descriptionText.text = character.description;
     }
 
     private void Load(){
