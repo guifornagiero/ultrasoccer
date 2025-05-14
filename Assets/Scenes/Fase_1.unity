@@ -2284,12 +2284,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3992fa5e7ab798e47b6fdf785c1ec2f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempoTotal: 60
+  tempoTotal: 180
   tempoTexto: {fileID: 149398684}
   faseAtual: 
-  fase2: Fase_2
-  fase3: Fase_3
+  preFase2: Pre Fase 2
+  preFase3: Pre Fase 3
   gameOver: GameOver
+  vitoria: Victory Scene
 --- !u!4 &1731214841
 Transform:
   m_ObjectHideFlags: 0

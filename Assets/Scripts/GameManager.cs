@@ -13,9 +13,10 @@ public class GameManager : MonoBehaviour
 
     [Header("Cenas")]
     public string faseAtual;
-    public string fase2 = "Fase_2";
-    public string fase3 = "Fase_3";
+    public string preFase2 = "Pre Fase 2";
+    public string preFase3 = "Pre Fase 3";
     public string gameOver = "GameOver";
+    public string vitoria = "Victory Scene";
 
     private bool jogoAcabou = false;
 
@@ -65,16 +66,16 @@ public class GameManager : MonoBehaviour
         {
             if (faseAtual == "Fase_1")
             {
-                SceneManager.LoadScene(fase2); // Vai pra Fase_2
+                SceneManager.LoadScene(preFase2); // Vai pra Fase_2
             }
             else if (faseAtual == "Fase_2")
             {
-                SceneManager.LoadScene(fase3); // Vai pra Fase_3
+                SceneManager.LoadScene(preFase3); // Vai pra Fase_3
             }
             else if (faseAtual == "Fase_3")
             {
                 // Vitória final (você pode trocar por uma tela de parabéns se quiser)
-                SceneManager.LoadScene("CharacterSelection");
+                SceneManager.LoadScene(vitoria);
             }
         }
         else

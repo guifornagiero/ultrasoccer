@@ -56,6 +56,13 @@ public class Gol : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
 
+        Rigidbody2D rbBola = bola.GetComponent<Rigidbody2D>();
+        if (rbBola != null)
+        {
+            rbBola.velocity = Vector2.zero;
+            rbBola.angularVelocity = 0f;
+        }
+
         bola.position = meioCampo.position;
 
         if (jogadorEsquerdo != null && jogadorDireito != null)
@@ -64,11 +71,5 @@ public class Gol : MonoBehaviour
             jogadorDireito.position = new Vector2(5f, 0f);
         }
 
-        Rigidbody2D rbBola = bola.GetComponent<Rigidbody2D>();
-        if (rbBola != null)
-        {
-            rbBola.velocity = Vector2.zero;
-            rbBola.angularVelocity = 0f;
-        }
     }
 }

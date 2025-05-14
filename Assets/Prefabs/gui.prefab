@@ -228,4 +228,4 @@ MonoBehaviour:
     m_Bits: 8
   ultKickMultiplier: 2
   ultDuration: 5
-  ultCooldownTime: 20
+  ultCooldownTime: 10

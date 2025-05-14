@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI; // necessário para Image
+using UnityEngine.SceneManagement;
 
 
 [System.Serializable]
@@ -21,11 +22,19 @@ public class DialogScript : MonoBehaviour
     public DialogueLine[] dialogueLines;
     public float textSpeed;
     private int index;
+    public string faseAtual;
+    public string preFase1 = "Pre Fase 1";
+    public string preFase2 = "Pre Fase 2";
+    public string preFase3 = "Pre Fase 3";
+    public string fase1 = "Fase_1";
+    public string fase2 = "Fase_2";
+    public string fase3 = "Fase_3";
 
     void Start()
     {
         textComponent.text = string.Empty;
         StartDialogue();
+        faseAtual = SceneManager.GetActiveScene().name;
     }
 
     void Update()
@@ -73,6 +82,18 @@ public class DialogScript : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
+            if(faseAtual == preFase1)
+            {
+                SceneManager.LoadScene(fase1);
+            }
+            else if(faseAtual == preFase2)
+            {
+                SceneManager.LoadScene(fase2);
+            }
+            else if(faseAtual == preFase3)
+            {
+                SceneManager.LoadScene(fase3);
+            }
         }
     }
 

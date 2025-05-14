@@ -2295,9 +2295,10 @@ MonoBehaviour:
   tempoTotal: 180
   tempoTexto: {fileID: 512984112}
   faseAtual: 
-  fase2: Fase_2
-  fase3: Fase_3
+  preFase2: Pre Fase 2
+  preFase3: Pre Fase 3
   gameOver: GameOver
+  vitoria: Victory Scene
 --- !u!4 &1699377358
 Transform:
   m_ObjectHideFlags: 0

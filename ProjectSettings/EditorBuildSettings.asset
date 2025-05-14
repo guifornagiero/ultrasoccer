@@ -9,16 +9,28 @@ EditorBuildSettings:
     path: Assets/Scenes/CharacterSelection.unity
     guid: 4261750aeda0d7c4c950b05a5279bf00
   - enabled: 1
+    path: Assets/Scenes/Pre Fase 1.unity
+    guid: cdb1b5db56f4ec04fb9c0d1aa119f29f
+  - enabled: 1
     path: Assets/Scenes/Fase_1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Pre Fase 2.unity
+    guid: 1b79ab1c03f7fcb46b500a63c8ecfe12
+  - enabled: 1
     path: Assets/Scenes/Fase_2.unity
     guid: 418cad3118116e24687482325dc290ea
+  - enabled: 1
+    path: Assets/Scenes/Pre Fase 3.unity
+    guid: 120ffab91a130064e8018ecb79a9dc65
   - enabled: 1
     path: Assets/Scenes/Fase_3.unity
     guid: ac3bad190eadc7245aca185ca5881892
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 03aeaf15b7b9da148826bca969337fb6
+  - enabled: 1
+    path: Assets/Scenes/Victory Scene.unity
+    guid: 7a10dca7940a9a147a507d80b500e4ed
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
